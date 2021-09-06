@@ -22,7 +22,35 @@
 
   &__content {
   }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:hover {
+      .ab {
+        display: block;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.7;
+        background-color: $sienna;
+      }
+    }
+  }
 }
+.ab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
 .tab-triggers {
   &__item {
     margin: 0px 15px 0px 15px;

@@ -1,5 +1,6 @@
 .main-page-block {
   padding: 320px 0px 0px 0px;
+  height: 100vh;
   color: $white;
 
   &__title {
@@ -30,8 +31,6 @@
 
 .btn-template {
   border-radius: 2px;
-  border: solid 2px $white;
-  padding: 12px 35px 11px 35px;
   width: 100%;
   max-width: 190px;
   display: flex;
@@ -45,4 +44,10 @@
   font-size: 16px;
   line-height: 1.5;
   color: $white;
+  padding: 12px 35px 11px 35px;
+  border: solid 2px $white;
+  &:hover {
+    color: $warm-grey;
+    border: solid 2px $warm-grey;
+  }
 }

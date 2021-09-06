@@ -27,13 +27,6 @@
 .about-block-slider {
   position: relative;
   width: 100%;
-  .button1 {
-    position: absolute;
-    top: 50%;
-    max-width: 30px;
-    left: 50%;
-  }
-
   &__photo {
     margin: 0px 0px 20px 0px;
   }
@@ -52,6 +45,19 @@
     flex-direction: column;
     margin: 0px 30px 0px 0px;
   }
+
+  &__hover-icons {
+    display: flex;
+    z-index: 2;
+    display: none;
+  }
+
+  &__hover-icons-item {
+    img {
+      width: 100%;
+      max-width: 20px;
+    }
+  }
 }
 
 .slick-next:before,
@@ -61,14 +67,14 @@
   color: $white-three;
   -webkit-font-smoothing: antialiased;
   text-align: center;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px 7px 10px;
   background-color: $greyish-brown;
 }
 .slick-next:before {
-  content: ">";
+  content: url(../img/arrow-next.svg);
 }
 .slick-prev:before {
-  content: "<";
+  content: url(../img/arrow-prev.svg);
 }
 .slick-next,
 .slick-prev {
