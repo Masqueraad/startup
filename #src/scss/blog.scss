@@ -1,0 +1,134 @@
+.blog-block {
+  padding: 100px 0px 100px 0px;
+  &__title {
+    margin: 0px 0px 60px 0px;
+  }
+
+  &__subtitle {
+    margin: 0px 0px 70px 0px;
+  }
+}
+
+.blog-block-items {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+    }
+  }
+
+  &__right {
+    margin: 0px 0px 0px 20px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+  }
+
+  &__img-date {
+    margin: 0px 15px 0px 0px;
+  }
+
+  &__title-text {
+    margin: 0px 0px 0px 15px;
+    h3 {
+      margin: 0px 0px 5px 0px;
+      font-family: "Montserrat";
+      font-size: 16px;
+      line-height: 1.5;
+      color: $sienna;
+      text-transform: uppercase;
+      span {
+        color: $greyish-brown;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.85;
+    color: $warm-grey;
+    span {
+      color: $sienna;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    color: $greyish-brown;
+    max-width: 640px;
+    margin: 0px 0px 35px 0px;
+  }
+
+  &__link {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.85;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    a {
+      color: $warm-grey;
+      &:hover {
+        color: $sienna;
+      }
+    }
+  }
+  &__border {
+    width: 100%;
+    height: 1px;
+    object-fit: contain;
+    background-color: $white-three;
+    margin: 40px 0px 40px 0px;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1200px) {
+  .blog-block-items {
+    &__row {
+      justify-content: flex-start;
+    }
+    &__left {
+      margin: 0px 0px 0px 0px;
+    }
+    &__right {
+      margin: 0px 0px 0px 20px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 320px) {
+  .blog-block-items {
+    &__row {
+      justify-content: center;
+    }
+    &__left {
+      margin: 0px 0px 40px 0px;
+    }
+    &__right {
+      margin: 0px 0px 0px 0px;
+    }
+  }
+}

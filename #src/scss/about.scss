@@ -1,0 +1,147 @@
+.about-block {
+  padding: 100px 0px 100px 0px;
+  background-color: $white-two;
+  &__title {
+    margin: 0px 0px 60px 0px;
+  }
+
+  &__subtitle {
+    margin: 0px 0px 70px 0px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__textcolumn {
+    flex: 1 1 45%;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $greyish-brown;
+    text-align: left;
+    margin: 0px 0px 70px 0px;
+  }
+}
+
+.about-block-slider {
+  position: relative;
+  width: 100%;
+  .button1 {
+    position: absolute;
+    top: 50%;
+    max-width: 30px;
+    left: 50%;
+  }
+
+  &__photo {
+    margin: 0px 0px 20px 0px;
+  }
+
+  &__name {
+    margin: 0px 0px 15px 0px;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 30px 0px 0px;
+  }
+}
+
+.slick-next:before,
+.slick-prev:before {
+  font-size: 20px;
+  line-height: 1;
+  color: $white-three;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  background-color: $greyish-brown;
+}
+.slick-next:before {
+  content: ">";
+}
+.slick-prev:before {
+  content: "<";
+}
+.slick-next,
+.slick-prev {
+  z-index: 2;
+  top: 42%;
+}
+.slick-prev {
+  left: 1px;
+}
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-next:focus:before,
+.slick-next:hover:before,
+.slick-prev:focus:before,
+.slick-prev:hover:before {
+  opacity: 1;
+  background-color: $sienna;
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 768px) {
+  .about-block {
+    &__textcolumn {
+      p {
+        padding: 0px 35px 0px 0px;
+      }
+    }
+    &__row {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 478px) {
+  .about-block-slider {
+    &__wrapper {
+      width: auto;
+    }
+  }
+  .slick-next {
+    right: 43px;
+  }
+}
+
+@media (min-width: 320px) {
+  .about-block {
+    &__textcolumn {
+      p {
+        padding: 0px 0px 0px 0px;
+      }
+    }
+    &__row {
+      flex-direction: column;
+    }
+  }
+  .about-block-slider {
+    &__wrapper {
+      width: 100%;
+    }
+  }
+
+  .slick-next {
+    right: 12px;
+  }
+}

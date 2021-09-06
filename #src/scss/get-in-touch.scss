@@ -1,0 +1,18 @@
+.get-in-touch-block {
+  background: url("../img/get-in-touchbg.png") 0 0 / cover no-repeat;
+  padding: 100px 0px 100px 0px;
+
+  &__title {
+    font-size: 30px;
+    line-height: 1.47;
+    text-align: center;
+    color: $white;
+    margin: 0px 0px 50px 0px;
+    h2 {
+      margin: 0px 0px 10px 0px;
+    }
+  }
+  &__btn {
+    max-width: 195px;
+  }
+}

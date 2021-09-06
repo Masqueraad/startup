@@ -1,0 +1,48 @@
+.main-page-block {
+  padding: 320px 0px 0px 0px;
+  color: $white;
+
+  &__title {
+    h1 {
+      font-family: "Montserrat";
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    margin: 0px 0px 35px 0px;
+  }
+
+  &__subtitle {
+    margin: 0px 0px 45px 0px;
+    h2 {
+      font-size: 20px;
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+
+  &__btn-padding {
+    padding: 0px 0px 260px 0px;
+  }
+}
+
+.btn-template {
+  border-radius: 2px;
+  border: solid 2px $white;
+  padding: 12px 35px 11px 35px;
+  width: 100%;
+  max-width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.btnlink-template {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 1.5;
+  color: $white;
+}

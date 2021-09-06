@@ -1,0 +1,42 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+$white: #fff;
+$off-white: #fffcf4;
+$red: #f00;
+$white-two: #f8f8f8;
+$black: #000;
+$sienna: #c0301c;
+$pinkish-grey: #bbb;
+$white-three: #ddd;
+$greyish-brown: #555;
+$warm-grey: #777;
+
+body {
+  font-family: "RobotoSlab";
+}
+.bg {
+  background: url("../img/home-background.jpg") 0 0 / cover no-repeat;
+}
+
+@import "null-style";
+@import "fonts";
+@import "header";
+@import "home";
+@import "services";
+@import "about";
+@import "grid";
+@import "works";
+@import "get-in-touch";
+@import "blog";
+@import "partners";
+@import "form";
+@import "footer";
