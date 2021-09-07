@@ -19,3 +19,5 @@ testWebP(function (support) {
 @@include("header.js")
 @@include("slider.js")
 @@include("works-tabs.js")
+@@include("popup.js")
+@@include("test.js")

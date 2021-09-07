@@ -392,6 +392,23 @@ h6 {
 
 .about-block-slider__photo {
   margin: 0px 0px 20px 0px;
+  position: relative;
+}
+
+.about-block-slider__photo:hover .about-block-slider__hover-icons {
+  opacity: 1;
+  visibility: visible;
+}
+
+.about-block-slider__photo:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #555;
+  opacity: 0.5;
 }
 
 .about-block-slider__name {
@@ -418,11 +435,43 @@ h6 {
 }
 
 .about-block-slider__hover-icons {
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  opacity: 0;
+  visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 2;
-  display: none;
+  position: absolute;
+  bottom: 30px;
+}
+
+.about-block-slider__hover-icons-item {
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.about-block-slider__hover-icons-item:hover {
+  background-color: #c0301c;
+}
+
+.about-block-slider__hover-icons-item:nth-child(1) {
+  padding: 7px 8px 5px 8px;
+}
+
+.about-block-slider__hover-icons-item:nth-child(2) {
+  padding: 8px 8px 7px 8px;
+}
+
+.about-block-slider__hover-icons-item:nth-child(3) {
+  padding: 7px 8px 7px 8px;
+}
+
+.about-block-slider__hover-icons-item:nth-child(4) {
+  padding: 7px 8px 7px 8px;
 }
 
 .about-block-slider__hover-icons-item img {
@@ -508,8 +557,9 @@ h6 {
   position: relative;
 }
 
-.works-block-tabs__img:hover .ab {
-  display: block;
+.works-block-tabs__img:hover .works-block-tabs-hover {
+  opacity: 1;
+  visibility: visible;
 }
 
 .works-block-tabs__img:hover::before {
@@ -543,7 +593,10 @@ h6 {
 }
 
 .tabs-content__item {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
 }
 
 .tabs-content__item--active {
@@ -555,6 +608,56 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  visibility: visible;
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+
+.works-block-tabs-hover {
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.works-block-tabs-hover__text {
+  text-align: center;
+  margin: 0px 0px 25px 0px;
+  max-width: 120px;
+}
+
+.works-block-tabs-hover__text p {
+  font-family: "Montserrat";
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  margin: 0px 0px 16px 0px;
+}
+
+.works-block-tabs-hover__text span {
+  font-size: 12px;
+  color: #fff;
+}
+
+.works-block-tabs-hover__btn {
+  width: 100%;
+  min-width: 100px;
+  background-color: #fff;
+  padding: 15px 0px 13px 0px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  color: #c0301c;
 }
 
 .get-in-touch-block {
@@ -936,6 +1039,41 @@ h6 {
   text-transform: uppercase;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+}
+
+.popup {
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+.popup img {
+  padding: 0px 15px 0px 15px;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+
 @media (min-width: 320px) {
   .services-block__row {
     -webkit-box-orient: vertical;
@@ -961,6 +1099,10 @@ h6 {
 
   .about-block-slider__wrapper {
     width: 100%;
+  }
+
+  .about-block-slider__hover-icons {
+    right: 32%;
   }
 
   .slick-next {
@@ -1027,6 +1169,10 @@ h6 {
 @media (min-width: 478px) {
   .about-block-slider__wrapper {
     width: auto;
+  }
+
+  .about-block-slider__hover-icons {
+    right: 22%;
   }
 
   .slick-next {
@@ -1124,6 +1270,10 @@ h6 {
 }
 
 @media (min-width: 1200px) {
+  .about-block-slider__hover-icons {
+    right: 28%;
+  }
+
   .container {
     max-width: 1170px;
   }

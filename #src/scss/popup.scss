@@ -1,0 +1,30 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+}
+.popup {
+  img {
+    padding: 0px 15px 0px 15px;
+    width: 100%;
+  }
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
