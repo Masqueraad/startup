@@ -573,13 +573,6 @@ h6 {
   background-color: #c0301c;
 }
 
-.ab {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-}
-
 .tab-triggers__item {
   margin: 0px 15px 0px 15px;
   font-size: 16px;
@@ -597,6 +590,14 @@ h6 {
   opacity: 0;
   width: 0px;
   height: 0px;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: -webkit-transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
 }
 
 .tabs-content__item--active {
@@ -608,13 +609,13 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   visibility: visible;
   opacity: 1;
   width: auto;
   height: auto;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .works-block-tabs-hover {

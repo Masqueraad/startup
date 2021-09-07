@@ -45,12 +45,6 @@
     }
   }
 }
-.ab {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: none;
-}
 
 .tab-triggers {
   &__item {
@@ -70,16 +64,18 @@
     opacity: 0;
     width: 0px;
     height: 0px;
+    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: scale(0);
   }
   &__item--active {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     visibility: visible;
     opacity: 1;
     width: auto;
     height: auto;
+    transform: scale(1);
   }
 }
 
