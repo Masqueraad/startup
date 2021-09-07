@@ -20,4 +20,3 @@ testWebP(function (support) {
 @@include("slider.js")
 @@include("works-tabs.js")
 @@include("popup.js")
-@@include("test.js")
