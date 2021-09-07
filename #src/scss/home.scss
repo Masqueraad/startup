@@ -1,6 +1,5 @@
 .main-page-block {
-  padding: 320px 0px 0px 0px;
-  height: 100vh;
+  padding: 20% 0px 20% 0px;
   color: $white;
 
   &__title {
@@ -22,10 +21,6 @@
       line-height: 1.2;
       text-align: center;
     }
-  }
-
-  &__btn-padding {
-    padding: 0px 0px 260px 0px;
   }
 }
 
@@ -50,4 +45,22 @@
     color: $warm-grey;
     border: solid 2px $warm-grey;
   }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 320px) {
 }
