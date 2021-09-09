@@ -7,4 +7,12 @@ $(document).ready(function () {
     $(".header__burger,.header__menu").removeClass("active");
     $("body").removeClass("lock");
   });
+  $(window).scroll(function () {
+    let height = $(window).scrollTop();
+    if (height > 50) {
+      $(".header").addClass("--fixed");
+    } else {
+      $(".header").removeClass("--fixed");
+    }
+  });
 });
