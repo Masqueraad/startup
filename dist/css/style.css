@@ -192,7 +192,7 @@ h6 {
 }
 
 .main-page-block {
-  padding: 25% 0px 25% 0px;
+  min-height: 770px;
   color: #fff;
 }
 
@@ -573,6 +573,10 @@ h6 {
 
 .tab-triggers__item:hover,
 .tab-triggers__item:focus {
+  color: #c0301c;
+}
+
+.tab-triggers__item--active {
   color: #c0301c;
 }
 
@@ -1175,6 +1179,10 @@ h6 {
     overflow: hidden;
   }
 
+  .main-page-block {
+    padding: 50% 0px 0px 0px;
+  }
+
   .services-block__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1342,6 +1350,10 @@ h6 {
 
   .header__link {
     font-size: 14px;
+  }
+
+  .main-page-block {
+    padding: 320px 0px 0px 0px;
   }
 
   .about-block__textcolumn p {

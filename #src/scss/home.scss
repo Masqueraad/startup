@@ -1,5 +1,5 @@
 .main-page-block {
-  padding: 25% 0px 25% 0px;
+  min-height: 770px;
   color: $white;
 
   &__title {
@@ -57,10 +57,16 @@
 }
 
 @media (min-width: 768px) {
+  .main-page-block {
+    padding: 320px 0px 0px 0px;
+  }
 }
 
 @media (min-width: 576px) {
 }
 
 @media (min-width: 320px) {
+  .main-page-block {
+    padding: 50% 0px 0px 0px;
+  }
 }
