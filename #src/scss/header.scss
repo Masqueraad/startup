@@ -1,52 +1,53 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 50;
-  padding: 40px 0px 0px 0px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(40%, 15%, 14%, 0.8);
+    z-index: 2;
+  }
   &__row {
     position: relative;
     display: flex;
     justify-content: space-between;
+    height: 80px;
     align-items: center;
   }
   &__logo {
     flex: 0 0 60px;
     position: relative;
     z-index: 3;
+
     img {
       max-width: 100%;
     }
   }
-
   &__burger {
     display: none;
   }
-  &__list {
-    display: flex;
-    position: relative;
-    z-index: 2;
-    li {
-      margin: 0px 0px 0px 30px;
-    }
-  }
 
   &__link {
-    color: $white;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.35px;
     font-family: "Montserrat";
-    &:hover {
-      color: $warm-grey;
-    }
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.35px;
+    color: $white;
   }
-}
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 @media (min-width: 1400px) {
@@ -60,36 +61,25 @@
 
 @media (min-width: 768px) {
   .container {
-    max-width: none;
+    max-width: 1100px;
   }
+
   .header {
+    &__row {
+      height: 80px;
+    }
     &__burger {
       display: none;
     }
     &__menu {
-      padding: 0;
-      top: 0;
       position: relative;
+      top: 0;
+      left: 0;
       width: auto;
       height: auto;
-      transition: none;
-      background: transparent;
+      overflow: auto;
+      transition: all 0.3s ease 0s;
     }
-    &__menu {
-      &.active {
-        display: none;
-      }
-    }
-
-    &__list {
-      display: flex;
-      position: relative;
-      z-index: 2;
-      li {
-        margin: 0px 0px 0px 30px;
-      }
-    }
-
     &__list {
       display: flex;
       position: relative;
@@ -102,75 +92,38 @@
       font-size: 14px;
     }
   }
-  body {
-    &.lock {
-      overflow: hidden;
-    }
-  }
 }
 
 @media (min-width: 576px) {
-  .header {
-    &__list {
-      li {
-        margin: 0px 0px 50% 0px;
-      }
-    }
-  }
 }
 
 @media (min-width: 320px) {
   .container {
     max-width: none;
   }
+
   .header {
+    &__row {
+      height: 50px;
+    }
     &__burger {
+      cursor: pointer;
       position: relative;
       height: 20px;
       width: 20px;
       display: block;
       z-index: 3;
-    }
-    &__burger::before,
-    &__burger::after {
-      content: "";
-      background-color: #fff;
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      left: 0;
-      transition: all 0.3s ease 0s;
-    }
-    &__burger::before {
-      top: 0;
-    }
-    &__burger::after {
-      bottom: 0;
-    }
-    &__burger {
-      &.active {
-        &::before {
-          transform: rotate(45deg);
-          top: 9px;
-        }
+      &::before,
+      &::after {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
       }
-    }
-    &__burger {
-      &.active {
-        &::after {
-          transform: rotate(-45deg);
-          bottom: 9px;
-        }
-      }
-    }
-    &__burger {
-      &.active {
-        span {
-          transform: scale(0);
-        }
-      }
-    }
-    &__burger {
+
       span {
         position: absolute;
         background-color: #fff;
@@ -180,6 +133,26 @@
         top: 9px;
         transition: all 0.3s ease 0s;
       }
+
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      &.active {
+        span {
+          transform: scale(0);
+        }
+        &::before {
+          transform: rotate(45deg);
+          top: 9px;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 9px;
+        }
+      }
     }
     &__menu {
       position: fixed;
@@ -188,34 +161,29 @@
       width: 100%;
       height: 100%;
       overflow: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      transition: all 0.3s ease 0s;
       text-align: center;
-    }
-    &__menu {
       &.active {
-        transition: all 0.3s ease 0s;
         padding: 100px 10px 20px 10px;
-        background: $warm-red;
+        background-color: $warm-red;
         top: 0;
+        transition: all 0.3s ease 0s;
       }
     }
+
     &__list {
       display: block;
-    }
-    &__list {
+
       li {
-        margin: 0px 0px 30% 0px;
+        margin: 0px 0px 20px 0px;
       }
     }
     &__link {
       font-size: 24px;
     }
   }
-  body {
-    &.lock {
-      overflow: hidden;
-    }
+
+  body.lock {
+    overflow: hidden;
   }
 }
